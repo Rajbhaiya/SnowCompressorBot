@@ -137,7 +137,7 @@ async def _(e):
 @bot.on(events.NewMessage(incoming=True))
 async def _(event):
         if event.sender_id != OWNER and event.sender_id not in DEV:
-            return await event.reply_text("**Sorry You're not An Authorised User!**")
+            return await event.reply("**Sorry You're not An Authorised User!**")
         if not event.photo:
             return
         os.system("rm thumb.jpg")
